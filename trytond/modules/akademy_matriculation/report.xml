@@ -9,7 +9,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Critério de admissão</field>
                         <field name="report_name">akademy_report.application.criteria.report</field>
                         <field name="model">akademy_configuration.lective.year</field>
-                        <field name="report">akademy_matriculation/reports/application_criteria.odt</field>
+                        <field name="report">akademy_matriculation/reports/application_criteria.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="application_criteria_report_keyword">
                         <field name="keyword">form_print</field>
@@ -22,7 +23,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Ficha do candidato</field>
                         <field name="report_name">akademy_report.candidates.report</field>
                         <field name="model">akademy_matriculation.candidates</field>
-                        <field name="report">akademy_matriculation/reports/candidate.odt</field>
+                        <field name="report">akademy_matriculation/reports/candidate.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="candidate_report_keyword">
                         <field name="keyword">form_print</field>
@@ -35,7 +37,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Pauta de exame de acesso</field>
                         <field name="report_name">akademy_report.application.result.report</field>
                         <field name="model">akademy_configuration.lective.year</field>
-                        <field name="report">akademy_matriculation/reports/applications_result.odt</field>
+                        <field name="report">akademy_matriculation/reports/applications_result.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="applications_result_report_keyword">
                         <field name="keyword">form_print</field>
@@ -48,7 +51,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Transferência externa</field>
                         <field name="report_name">akademy_report.student.transfer.report</field>
                         <field name="model">akademy_matriculation.student.transfer</field>
-                        <field name="report">akademy_matriculation/reports/student_transfer.odt</field>
+                        <field name="report">akademy_matriculation/reports/student_transfer.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="student_transfer_report_keyword">
                         <field name="keyword">form_print</field>
@@ -59,7 +63,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Transferência interna</field>
                         <field name="report_name">akademy_report.student.transfer.internal.report</field>
                         <field name="model">akademy_matriculation.student.transfer</field>
-                        <field name="report">akademy_matriculation/reports/student_transfer_internal.odt</field>
+                        <field name="report">akademy_matriculation/reports/student_transfer_internal.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="student_transfer_internal_report_keyword">
                         <field name="keyword">form_print</field>
@@ -72,7 +77,8 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">Gerar equivalência</field>
                         <field name="report_name">akademy_report.equivalence.discipline.report</field>
                         <field name="model">akademy_matriculation.student.transfer</field>
-                        <field name="report">akademy_matriculation/reports/equivalence_discipline.odt</field>
+                        <field name="report">akademy_matriculation/reports/equivalence_discipline.fodt</field>
+                        <field name="extension">pdf</field>
                 </record>
                 <record model="ir.action.keyword" id="equivalence_discipline_report_keyword">
                         <field name="keyword">form_print</field>
