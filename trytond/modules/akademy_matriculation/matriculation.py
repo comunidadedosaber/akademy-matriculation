@@ -631,46 +631,46 @@ class MatriculationCreateWzard(Wizard):
             ('studyplan', '=', studyplan)
             ])
 
-        if get_classes[0].state == False: 
-            if len(student.student.classe_student) > 0:
-                raise UserError("Infelizmente não é possível matricular o discente, porque o discente já está matriculado.")                    
-            else:
-                if len(get_classes) > 0:                        
-                    get_class_student = ClasseStudent.search(
-                        [
-                            ('student', '=', student.student),
-                            ('classes', '=', get_classes[0])
-                        ]
-                    ) 
-                    
-                    if len(get_class_student) > 0:
-                        raise UserError("O discente "+student.student.party.name+" já existe na instituição, por favor verifique a matrícula na "+get_class_student[0].classes.name+".")                        
-                    else:
-                        if (get_classes[0].max_student != len(get_classes[0].classe_student)):
-                            matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                            matriculation_type = MatriculationType.search([('name', '=', 'Transfêrido(a)')], limit=1)
-
-                            MatriculationCreateWzard.create_student_matriculation(student, ClasseStudent, matriculation_state[0], matriculation_type[0], student.student, get_classes[0], get_classes[0].classe, 0)                                                        
-                            student_matriculation = Student.search([
-                                ('party','=',student.student.party),
-                                ('academic_level','=',student.student.academic_level),
-                                ('area','=',student.student.area),
-                                ('course','=',student.student.course)
-                                ])
-                            
-                            if len(student_matriculation) > 0:
-                                state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                                student_matriculation[0].state = state[0]
-                                student_matriculation[0].save()
-                                                        
-                            MatriculationCreateWzard.student_transferred_discipline(student.student.classe_student, get_student_transferred_discipline, get_classes[0].studyplan)
-                        else:
-                            raise UserError("Infelizmente não é possível matricular o discente, porque ja excedeu o limite de vagas disponíveis.")
-                else:
-                    raise UserError("Infelizmente não é possível matricular o discente, porque não foi encontrado um encontrado uma turma disponivel.")           
-    
+        #if get_classes[0].state == False: 
+        if len(student.student.classe_student) > 0:
+            raise UserError("Infelizmente não é possível matricular o discente, porque o discente já está matriculado.")                    
         else:
-            raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
+            if len(get_classes) > 0:                        
+                get_class_student = ClasseStudent.search(
+                    [
+                        ('student', '=', student.student),
+                        ('classes', '=', get_classes[0])
+                    ]
+                ) 
+                
+                if len(get_class_student) > 0:
+                    raise UserError("O discente "+student.student.party.name+" já existe na instituição, por favor verifique a matrícula na "+get_class_student[0].classes.name+".")                        
+                else:
+                    if (get_classes[0].max_student != len(get_classes[0].classe_student)):
+                        matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
+                        matriculation_type = MatriculationType.search([('name', '=', 'Transfêrido(a)')], limit=1)
+
+                        MatriculationCreateWzard.create_student_matriculation(student, ClasseStudent, matriculation_state[0], matriculation_type[0], student.student, get_classes[0], get_classes[0].classe, 0)                                                        
+                        student_matriculation = Student.search([
+                            ('party','=',student.student.party),
+                            ('academic_level','=',student.student.academic_level),
+                            ('area','=',student.student.area),
+                            ('course','=',student.student.course)
+                            ])
+                        
+                        if len(student_matriculation) > 0:
+                            state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
+                            student_matriculation[0].state = state[0]
+                            student_matriculation[0].save()
+                                                    
+                        MatriculationCreateWzard.student_transferred_discipline(student.student.classe_student, get_student_transferred_discipline, get_classes[0].studyplan)
+                    else:
+                        raise UserError("Infelizmente não é possível matricular o discente, porque ja excedeu o limite de vagas disponíveis.")
+            else:
+                raise UserError("Infelizmente não é possível matricular o discente, porque não foi encontrado um encontrado uma turma disponivel.")           
+    
+        #else:
+        #    raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
     
     @classmethod
     def student_transferred_discipline(cls, student, discipline_negative, studyplan):        
