@@ -736,31 +736,31 @@ class AssociationDisciplineCreateWzard(Wizard):
         state_student = ['Aguardando', 'Suspenso(a)', 'Anulada', 'Transfêrido(a)', 'Reprovado(a)']
         list_matriculation = 0
 
-        if self.start.classes.state == False:
-            for classe_student in self.start.classes.classe_student:
-                if classe_student.state.name not in state_student:
-                    for studyplan_discipline in self.start.classes.studyplan.studyplan_discipline:
-                        matriculaton_discipline = StudentDiscipline.search(
-                            [('classe_student', '=', classe_student), ('studyplan_discipline', '=', studyplan_discipline)]
+        #if self.start.classes.state == False:
+        for classe_student in self.start.classes.classe_student:
+            if classe_student.state.name not in state_student:
+                for studyplan_discipline in self.start.classes.studyplan.studyplan_discipline:
+                    matriculaton_discipline = StudentDiscipline.search(
+                        [('classe_student', '=', classe_student), ('studyplan_discipline', '=', studyplan_discipline)]
+                    )
+                    
+                    if (len(matriculaton_discipline) < 1):
+                        list_matriculation = 1
+                        discipline_modality = DisciplineModality.search([('name', '=', "Presencial")], limit=1)
+
+                        matriculaton = StudentDiscipline(
+                            classe_student = classe_student,
+                            studyplan_discipline = studyplan_discipline,
+                            state = classe_student.state,
+                            modality = discipline_modality[0]
                         )
-                        
-                        if (len(matriculaton_discipline) < 1):
-                            list_matriculation = 1
-                            discipline_modality = DisciplineModality.search([('name', '=', "Presencial")], limit=1)
+                        matriculaton.save()
 
-                            matriculaton = StudentDiscipline(
-                                classe_student = classe_student,
-                                studyplan_discipline = studyplan_discipline,
-                                state = classe_student.state,
-                                modality = discipline_modality[0]
-                            )
-                            matriculaton.save()
+        if list_matriculation == 0:
+            raise UserError("Não foi possível associar disciplinas aos discentes desta turma, por favor verificar se a turma tem discentes ou se todas as disciplinas já foram associadas.")		
 
-            if list_matriculation == 0:
-                raise UserError("Não foi possível associar disciplinas aos discentes desta turma, por favor verificar se a turma tem discentes ou se todas as disciplinas já foram associadas.")		
-
-        else:
-            raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
+        #else:
+        #    raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
                     
         return 'end'  
 
