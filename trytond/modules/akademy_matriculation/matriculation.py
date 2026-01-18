@@ -508,17 +508,17 @@ class MatriculationCreateWzard(Wizard):
             ])
 
         if len(get_classes) > 0:
-            if get_classes[0].state == False:
-                if (get_classes[0].max_student != len(get_classes[0].classe_student)):
-                    matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                    matriculation_type = MatriculationType.search([('name', '=', type)], limit=1)                                                
-                    MatriculationStudent = MatriculationCreateWzard.create_student_matriculation(
-                        application, ClasseStudent, matriculation_state[0], matriculation_type[0], 
-                        matriculation, get_classes[0], get_classes[0].classe, 0
-                    )
-                    
-                    if len(application.area.studyplan[0].studyplan_discipline) > 0:
-                        MatriculationCreateWzard.discipline_matriculation(MatriculationStudent, get_classes[0].studyplan.studyplan_discipline) 
+            #if get_classes[0].state == False:            
+            if (get_classes[0].max_student != len(get_classes[0].classe_student)):
+                matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
+                matriculation_type = MatriculationType.search([('name', '=', type)], limit=1)                                                
+                MatriculationStudent = MatriculationCreateWzard.create_student_matriculation(
+                    application, ClasseStudent, matriculation_state[0], matriculation_type[0], 
+                    matriculation, get_classes[0], get_classes[0].classe, 0
+                )
+                
+                if len(application.area.studyplan[0].studyplan_discipline) > 0:
+                    MatriculationCreateWzard.discipline_matriculation(MatriculationStudent, get_classes[0].studyplan.studyplan_discipline) 
 
                 else:
                     raise UserError("Infelizmente não é possível matricular o discente, porque ja excedeu o limite de vagas disponíveis.")
