@@ -108,6 +108,9 @@ class Applications(ModelSQL, ModelView):
     course_classe = fields.Many2One('akademy_configuration.course.classe', 'Classe',
         domain=[('course', '=', Eval('course', 1))],
         depends=['course'], required=True, ondelete="RESTRICT")
+    company = fields.Many2One(
+        'company.company', 'Instituição', #required=True, 
+        ondelete="RESTRICT", help="Nome da instituição.") 
     result = fields.One2Many('akademy_matriculation.applications.result', 
         'application', 'Resultado', 
         states={'invisible': Not(Bool(Eval('state')))}, depends=['state'])
