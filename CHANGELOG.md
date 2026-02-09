@@ -4,6 +4,15 @@ All changes made in **akademy-matriculation** project will be listed in this fil
 The format as follows the recomendations of [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/). And Semantic Versioning
 
 
+## [1.1.4] - 2026-02-09
+### Changed
+- Add company relationship
+
+
+## [1.1.3] - 2026-02-01
+### Changed
+- Update to SAGE Edu version 1.2
+
 
 ## [1.1.2] - 2025-01-18
 ### Changed
