@@ -4,6 +4,11 @@ All changes made in **akademy-matriculation** project will be listed in this fil
 The format as follows the recomendations of [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/). And Semantic Versioning
 
 
+## [1.1.5] - 2026-03-04
+### Added
+- Added German translation
+
+
 ## [1.1.4] - 2026-02-09
 ### Changed
 - Add company relationship
