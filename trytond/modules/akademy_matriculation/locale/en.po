@@ -648,3 +648,46 @@ msgstr ""
 "It was not possible to register the new admission criteria, please check the limit of "
 "available places."
 
+msgctxt "view:akademy_configuration.application.criteria:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "view:akademy_matriculation.applications:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "view:akademy_matriculation.applications:"
+msgid "Resultados"
+msgstr "Results"
+
+msgctxt "view:akademy_matriculation.candidates:"
+msgid "Candidaturas"
+msgstr "Applications"
+
+msgctxt "view:akademy_configuration.lective.year:"
+msgid "Fases"
+msgstr "Phases"
+
+msgctxt "view:akademy_configuration.phase:"
+msgid "Critérios"
+msgstr "Criteria"
+
+msgctxt "view:akademy_matriculation.student.transfer:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "view:akademy_matriculation.student.transfer:"
+msgid "Disciplinas"
+msgstr "Disciplines"
+
+msgctxt "model:ir.action,name:act_matriculation_wizard"
+msgid "Matrícular"
+msgstr "Enroll"
+
+msgctxt "model:ir.action,name:act_associationdiscipline_wizard"
+msgid "Associar disciplina"
+msgstr "Associate discipline"
+
+msgctxt "model:ir.action,name:act_application_avaliation_wizard"
+msgid "Avaliar candidatura"
+msgstr "Evaluate application"

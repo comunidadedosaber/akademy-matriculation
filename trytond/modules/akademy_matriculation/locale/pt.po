@@ -648,3 +648,46 @@ msgstr ""
 "Não foi possível cadastrar o novo critério de admissão, por favor verifica o limite de "
 "vagas disponivés."
 
+msgctxt "view:akademy_configuration.application.criteria:"
+msgid "Descrição"
+msgstr "Descrição"
+
+msgctxt "view:akademy_matriculation.applications:"
+msgid "Descrição"
+msgstr "Descrição"
+
+msgctxt "view:akademy_matriculation.applications:"
+msgid "Resultados"
+msgstr "Resultados"
+
+msgctxt "view:akademy_matriculation.candidates:"
+msgid "Candidaturas"
+msgstr "Candidaturas"
+
+msgctxt "view:akademy_configuration.lective.year:"
+msgid "Fases"
+msgstr "Fases"
+
+msgctxt "view:akademy_configuration.phase:"
+msgid "Critérios"
+msgstr "Critérios"
+
+msgctxt "view:akademy_matriculation.student.transfer:"
+msgid "Descrição"
+msgstr "Descrição"
+
+msgctxt "view:akademy_matriculation.student.transfer:"
+msgid "Disciplinas"
+msgstr "Disciplinas"
+
+msgctxt "model:ir.action,name:act_matriculation_wizard"
+msgid "Matrícular"
+msgstr "Matrícular"
+
+msgctxt "model:ir.action,name:act_associationdiscipline_wizard"
+msgid "Associar disciplina"
+msgstr "Associar disciplina"
+
+msgctxt "model:ir.action,name:act_application_avaliation_wizard"
+msgid "Avaliar candidatura"
+msgstr "Avaliar candidatura"
