@@ -1,8 +1,7 @@
 # 🏫 SAGE Education - Institutional Management / ERP
 
-**Version:** 1.3.x  
-**Module:** Akademy Matriculation  
-**Developer:** Zacarias Juliano Capingala *(FPC)*      
+**Module:** Akademy Matriculation   
+**Version:** 7.0.x        
 
 
 ---
@@ -95,8 +94,8 @@ It is designed for use by **schools, training centers, universities, and educati
 ### 🌐 Homepage
   
 **Website:** [sage-edu.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
-**App:** [sage.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
-**Docs:** [docs.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
+**App:** [sage.comunidadedosaber.ao](https://sage.comunidadedosaber.ao)  
+**Docs:** [docs.comunidadedosaber.ao](https://docs.comunidadedosaber.ao)  
 **Team:** [comunidadedosaber.ao](https://comunidadedosaber.ao)  
 **PyPi:** [SAGE Edu](https://pypi.org/user/comunidade_do_saber)
 

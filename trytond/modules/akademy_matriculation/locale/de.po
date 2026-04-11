@@ -46,7 +46,7 @@ msgstr "BewerbungBewertung ErstellenStart"
 
 msgctxt "model:akademy_configuration.matriculation.reference,name:"
 msgid "Matriculation Reference"
-msgstr "Immatrikulationsnummer"
+msgstr "Einschreibungsnummer"
 
 msgctxt "model:akademy_configuration.phase,name:"
 msgid "Phase"
@@ -134,7 +134,7 @@ msgstr "Kurs"
 
 msgctxt "field:akademy_matriculation.candidates,academic_level:"
 msgid "Nível acadêmico"
-msgstr "Akademischer Grad"
+msgstr "Schulstufe"
 
 msgctxt "field:akademy_matriculation.candidates,applications:"
 msgid "Candidaturas"
@@ -150,7 +150,7 @@ msgstr "Beschreibung"
 
 msgctxt "field:akademy_matriculation.applications,reference:"
 msgid "Modalidade"
-msgstr "Referenz"
+msgstr "Art"
 
 msgctxt "field:akademy_matriculation.applications,age:"
 msgid "Idade"
@@ -170,7 +170,7 @@ msgstr "Schuljahr"
 
 msgctxt "field:akademy_matriculation.applications,academic_level:"
 msgid "Nível acadêmico"
-msgstr "Akademischer Grad"
+msgstr "Schulstufe"
 
 msgctxt "field:akademy_matriculation.applications,area:"
 msgid "Área"
@@ -182,7 +182,7 @@ msgstr "Kurs"
 
 msgctxt "field:akademy_matriculation.applications,course_classe:"
 msgid "Classe"
-msgstr "Klasse"
+msgstr "Schulklasse"
 
 msgctxt "field:akademy_matriculation.applications,result:"
 msgid "Resultado"
@@ -226,7 +226,7 @@ msgstr "Schuljahr"
 
 msgctxt "field:akademy_matriculation.student.transfer,academic_level:"
 msgid "Nível acadêmico"
-msgstr "Akademischer Grad"
+msgstr "Schulstufe"
 
 msgctxt "field:akademy_matriculation.student.transfer,area:"
 msgid "Área"
@@ -238,7 +238,7 @@ msgstr "Kurs"
 
 msgctxt "field:akademy_matriculation.student.transfer,course_classe:"
 msgid "Classe"
-msgstr "Klasse"
+msgstr "Schulklasse"
 
 msgctxt "field:akademy_matriculation.student.transfer,student:"
 msgid "Discente"
@@ -266,7 +266,7 @@ msgstr "Fach"
 
 msgctxt "field:akademy_matriculation.student.transfer.discipline,course_classe:"
 msgid "Classe"
-msgstr "Klasse"
+msgstr "Schulklasse"
 
 msgctxt "field:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
 msgid "Candidato"
@@ -298,7 +298,7 @@ msgstr "Name"
 
 msgctxt "field:akademy_configuration.matriculation.reference,applications:"
 msgid "Modalidade de candidatura"
-msgstr "Bewerbungsreferenzen"
+msgstr "Art der Bewerbung"
 
 msgctxt "field:akademy_configuration.phase,code:"
 msgid "Código"
@@ -378,7 +378,7 @@ msgstr "Schuljahr"
 
 msgctxt "field:akademy_configuration.application.criteria,academic_level:"
 msgid "Nível académico"
-msgstr "Akademischer Grad"
+msgstr "Schulstufe"
 
 msgctxt "field:akademy_configuration.application.criteria,area:"
 msgid "Área"
@@ -390,7 +390,7 @@ msgstr "Kurs"
 
 msgctxt "field:akademy_configuration.application.criteria,course_classe:"
 msgid "Classe"
-msgstr "Klasse"
+msgstr "Schulklasse"
 
 msgctxt "field:akademy_configuration.application.criteria,phase:"
 msgid "Fase"
@@ -462,11 +462,11 @@ msgstr "Schuljahr, für das Sie sich anmelden möchten."
 
 msgctxt "help:akademy_matriculation.applications,academic_level:"
 msgid "Nível acadêmico que pretende se inscrever."
-msgstr "Akademischer Grad, für den Sie sich bewerben möchten."
+msgstr "Schulstufe, für die Sie sich bewerben möchten."
 
 msgctxt "help:akademy_matriculation.student.transfer,academic_level:"
 msgid "Nível acadêmico que pretende se inscrever."
-msgstr "Akademischer Grad, für den Sie sich bewerben möchten."
+msgstr "Schulstufe, für den Sie sich bewerben möchten."
 
 msgctxt "help:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
 msgid "Matrícula para candidato."
@@ -544,7 +544,7 @@ msgid ""
 "acadêmico."
 msgstr ""
 "Es war nicht möglich, den neuen Bewerber zu registrieren. Bitte überprüfen Sie, ob bereits ein Bewerber "
-"mit diesem akademischen Niveau vorhanden ist."
+"mit dieser Schulstufe vorhanden ist."
 
 msgctxt "error:akademy_matriculation.candidates:"
 msgid ""
