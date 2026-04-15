@@ -6,6 +6,8 @@ this repository contains the full copyright notices and license terms. -->
     <group id="applications" colspan="4" col="4"> 
         <label name="lective_year"/>
         <field name="lective_year" width="25"/> 
+        <label name="company"/>
+        <field name="company" /> 
         <label name="academic_level"/>
         <field name="academic_level" />   
         <label name="area"/>
